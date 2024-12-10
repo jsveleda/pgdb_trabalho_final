@@ -103,6 +103,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UC_Cardapio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Cardapio.Designer.cs">
+      <DependentUpon>UC_Cardapio.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomeMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserLogin.cs" />
+    <EmbeddedResource Include="UC_Cardapio.resx">
+      <DependentUpon>UC_Cardapio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomeMenu.resx">
       <DependentUpon>HomeMenu.cs</DependentUpon>
     </EmbeddedResource>

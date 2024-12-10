@@ -28,34 +28,66 @@ namespace Calendário_do_RU
             Close();
         }
 
+        private void InstantiateOnUC_Cardapio(DateTime dateTime)
+        {
+
+            UC_Cardapio cardapio = new UC_Cardapio
+            {
+                SelectedDate = dateTime, // Define a data
+            };
+
+            cardapio.LoadMenu(); // Carrega o cardápio do banco
+
+            int x = (homeMenuPanel.Width - cardapio.Width) / 2;
+            int y = (homeMenuPanel.Height - cardapio.Height) / 2;
+            cardapio.Location = new System.Drawing.Point(x, y+60);
+
+            homeMenuPanel.Controls.RemoveByKey("UC_Cardapio");
+
+            homeMenuPanel.Controls.Add(cardapio);// Adiciona o controle ao formulário
+            cardapio.BringToFront(); // Coloca o controle na frente
+        }
+
         private void firstDateTab_Click(object sender, EventArgs e)
         {
             txtTitle.Text = _title + firstDateTab.Text;
+
+            InstantiateOnUC_Cardapio(DateTime.Today);
         }
 
         private void secondDateTab_Click(object sender, EventArgs e)
         {
             txtTitle.Text = _title + secondDateTab.Text;
+
+            InstantiateOnUC_Cardapio(DateTime.Today.AddDays(1));
         }
 
         private void thirdDateTab_Click(object sender, EventArgs e)
         {
             txtTitle.Text = _title + thirdDateTab.Text;
+
+            InstantiateOnUC_Cardapio(DateTime.Today.AddDays(2));
         }
 
         private void fourthDateTab_Click(object sender, EventArgs e)
         {
             txtTitle.Text = _title + fourthDateTab.Text;
+
+            InstantiateOnUC_Cardapio(DateTime.Today.AddDays(3));
         }
 
         private void fifthDateTab_Click(object sender, EventArgs e)
         {
             txtTitle.Text = _title + fifthDateTab.Text;
+
+            InstantiateOnUC_Cardapio(DateTime.Today.AddDays(4));
         }
 
         private void sixthDateTab_Click(object sender, EventArgs e)
         {
             txtTitle.Text = _title + sixthDateTab.Text;
+
+            InstantiateOnUC_Cardapio(DateTime.Today.AddDays(5));
         }
     }
 }

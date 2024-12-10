@@ -43,3 +43,4 @@ C:\Users\josue\Documents\2024_2\PGDB\Trabalho Final\Calendário do RU\bin\Debug\
 C:\Users\josue\Documents\2024_2\PGDB\Trabalho Final\Calendário do RU\obj\Debug\Calendár.C2FF7A34.Up2Date
 C:\Users\josue\Documents\2024_2\PGDB\Trabalho Final\Calendário do RU\obj\Debug\Calendário_do_RU.HomeMenu.resources
 C:\Users\josue\Documents\2024_2\PGDB\Trabalho Final\Calendário do RU\bin\Debug\Guna.UI2.dll
+C:\Users\josue\Documents\2024_2\PGDB\Trabalho Final\Calendário do RU\obj\Debug\Calendário_do_RU.UC_Cardapio.resources

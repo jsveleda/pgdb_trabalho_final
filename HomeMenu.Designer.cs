@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAddMenu = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTitle = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -38,22 +37,15 @@
             this.fifthDateTab = new Guna.UI2.WinForms.Guna2Button();
             this.secondDateTab = new Guna.UI2.WinForms.Guna2Button();
             this.thirdDateTab = new Guna.UI2.WinForms.Guna2Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.homeMenuPanel = new System.Windows.Forms.Panel();
             this.btnGoBack = new System.Windows.Forms.Button();
+            this.btnAddMenu = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.homeMenuPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnAddMenu
-            // 
-            this.btnAddMenu.Font = new System.Drawing.Font("Berlin Sans FB Demi", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddMenu.Location = new System.Drawing.Point(236, 553);
-            this.btnAddMenu.Name = "btnAddMenu";
-            this.btnAddMenu.Size = new System.Drawing.Size(152, 35);
-            this.btnAddMenu.TabIndex = 4;
-            this.btnAddMenu.Text = "Adicionar Cardápio";
-            this.btnAddMenu.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -188,28 +180,49 @@
             this.thirdDateTab.Text = "guna2Button1";
             this.thirdDateTab.Click += new System.EventHandler(this.thirdDateTab_Click);
             // 
-            // panel3
+            // homeMenuPanel
             // 
-            this.panel3.Controls.Add(this.btnGoBack);
-            this.panel3.Controls.Add(this.btnAddMenu);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.MaximumSize = new System.Drawing.Size(400, 600);
-            this.panel3.MinimumSize = new System.Drawing.Size(400, 600);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(400, 600);
-            this.panel3.TabIndex = 7;
+            this.homeMenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.homeMenuPanel.Controls.Add(this.panel3);
+            this.homeMenuPanel.Location = new System.Drawing.Point(0, 0);
+            this.homeMenuPanel.MaximumSize = new System.Drawing.Size(400, 400);
+            this.homeMenuPanel.MinimumSize = new System.Drawing.Size(400, 600);
+            this.homeMenuPanel.Name = "homeMenuPanel";
+            this.homeMenuPanel.Size = new System.Drawing.Size(400, 600);
+            this.homeMenuPanel.TabIndex = 7;
             // 
             // btnGoBack
             // 
             this.btnGoBack.Font = new System.Drawing.Font("Berlin Sans FB Demi", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoBack.Location = new System.Drawing.Point(12, 553);
+            this.btnGoBack.Location = new System.Drawing.Point(5, 8);
             this.btnGoBack.Name = "btnGoBack";
             this.btnGoBack.Size = new System.Drawing.Size(152, 35);
             this.btnGoBack.TabIndex = 8;
             this.btnGoBack.Text = "Voltar";
             this.btnGoBack.UseVisualStyleBackColor = true;
             this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
+            // 
+            // btnAddMenu
+            // 
+            this.btnAddMenu.Font = new System.Drawing.Font("Berlin Sans FB Demi", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMenu.Location = new System.Drawing.Point(236, 8);
+            this.btnAddMenu.Name = "btnAddMenu";
+            this.btnAddMenu.Size = new System.Drawing.Size(152, 35);
+            this.btnAddMenu.TabIndex = 4;
+            this.btnAddMenu.Text = "Adicionar Cardápio";
+            this.btnAddMenu.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnAddMenu);
+            this.panel3.Controls.Add(this.btnGoBack);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 545);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(400, 55);
+            this.panel3.TabIndex = 9;
             // 
             // HomeMenu
             // 
@@ -218,7 +231,7 @@
             this.ClientSize = new System.Drawing.Size(400, 600);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.homeMenuPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(400, 600);
             this.MinimumSize = new System.Drawing.Size(400, 600);
@@ -229,24 +242,25 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.homeMenuPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAddMenu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button firstDateTab;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel homeMenuPanel;
         private System.Windows.Forms.Label txtTitle;
-        private System.Windows.Forms.Button btnGoBack;
         private Guna.UI2.WinForms.Guna2Button sixthDateTab;
         private Guna.UI2.WinForms.Guna2Button fifthDateTab;
         private Guna.UI2.WinForms.Guna2Button fourthDateTab;
         private Guna.UI2.WinForms.Guna2Button secondDateTab;
         private Guna.UI2.WinForms.Guna2Button thirdDateTab;
+        private System.Windows.Forms.Button btnAddMenu;
+        private System.Windows.Forms.Button btnGoBack;
+        private System.Windows.Forms.Panel panel3;
     }
 }
