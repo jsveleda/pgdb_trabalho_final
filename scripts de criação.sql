@@ -117,5 +117,21 @@ GRANT INSERT ON RUCalendarDB.ingredients TO 'admin_user'@'localhost';
 REVOKE SELECT, UPDATE, DELETE ON RUCalendarDB.* FROM 'admin_user'@'localhost';
 FLUSH PRIVILEGES;
 
+GRANT SELECT, INSERT ON nome_do_banco.* TO 'admin_user'@'localhost';
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'admin_user'@'localhost';
+
+CREATE USER 'regular_user'@'localhost' IDENTIFIED BY 'senha_do_regular_user';
+GRANT SELECT ON nome_do_banco.* TO 'regular_user'@'localhost';
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'regular_user'@'localhost';
+
+ALTER USER 'admin_user'@'localhost' IDENTIFIED BY 'password123';
+ALTER USER 'regular_user'@'localhost' IDENTIFIED BY 'senha_do_regular_user';
+
+GRANT ALL PRIVILEGES ON RUCalendarDB.* TO 'admin_user'@'localhost';
+GRANT SELECT ON RUCalendarDB.* TO 'regular_user'@'localhost';
+FLUSH PRIVILEGES;
+
 
 

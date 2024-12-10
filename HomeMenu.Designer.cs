@@ -213,6 +213,7 @@
             this.btnAddMenu.TabIndex = 4;
             this.btnAddMenu.Text = "Adicionar Cardápio";
             this.btnAddMenu.UseVisualStyleBackColor = true;
+            this.btnAddMenu.Click += new System.EventHandler(this.btnAddMenu_Click);
             // 
             // panel3
             // 
@@ -236,7 +237,7 @@
             this.MaximumSize = new System.Drawing.Size(400, 600);
             this.MinimumSize = new System.Drawing.Size(400, 600);
             this.Name = "HomeMenu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cardápio";
             this.Load += new System.EventHandler(this.HomeMenu_Load);
             this.panel1.ResumeLayout(false);

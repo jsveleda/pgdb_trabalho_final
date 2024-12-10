@@ -47,6 +47,7 @@
             this.txtUserCode.Name = "txtUserCode";
             this.txtUserCode.Size = new System.Drawing.Size(100, 20);
             this.txtUserCode.TabIndex = 0;
+            this.txtUserCode.TextChanged += new System.EventHandler(this.txtUserCode_TextChanged);
             this.txtUserCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.userIdInputField_KeyPress);
             // 
             // txtPassword
@@ -58,6 +59,7 @@
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // loginLabel
             // 
@@ -68,6 +70,7 @@
             this.loginLabel.Size = new System.Drawing.Size(68, 25);
             this.loginLabel.TabIndex = 2;
             this.loginLabel.Text = "Login";
+            this.loginLabel.Click += new System.EventHandler(this.loginLabel_Click);
             // 
             // btnLogin
             // 
@@ -89,6 +92,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 100);
             this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -101,6 +105,7 @@
             this.label1.Size = new System.Drawing.Size(365, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Cardápio Restaurante Universitário";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnClose
             // 

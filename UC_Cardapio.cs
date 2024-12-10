@@ -23,7 +23,7 @@ namespace Calendário_do_RU
         /// </summary>
         public void LoadMenu()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["MySqlConnectionString"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["MySqlRegConnectionString"].ConnectionString;
 
             try
             {

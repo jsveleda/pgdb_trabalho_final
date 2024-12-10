@@ -6,10 +6,13 @@ namespace Calendário_do_RU
     public partial class HomeMenu : Form
     {
         private string _title = "Cardápio do dia ";
+        private bool _isAdmin;
+
         public HomeMenu(bool isAdmin)
         {
             InitializeComponent();
 
+            _isAdmin = isAdmin;
             btnAddMenu.Visible = isAdmin;
         }
 
@@ -88,6 +91,13 @@ namespace Calendário_do_RU
             txtTitle.Text = _title + sixthDateTab.Text;
 
             InstantiateOnUC_Cardapio(DateTime.Today.AddDays(5));
+        }
+
+        private void btnAddMenu_Click(object sender, EventArgs e)
+        {
+            NewCardapioMenu newCardapioMenu = new NewCardapioMenu(_isAdmin);
+
+            newCardapioMenu.ShowDialog();
         }
     }
 }
